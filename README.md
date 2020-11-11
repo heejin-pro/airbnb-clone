@@ -1,3 +1,3 @@
 # Airbnb Clone
 
-Cloning Airbnb using Python, Django, ..
+Cloning Airbnb using Python, Django, ...
