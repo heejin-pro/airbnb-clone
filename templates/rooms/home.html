@@ -6,7 +6,23 @@ HOME
 
 
 {% block content %}
-    {% for room in rooms%}
+
+    {% for room in page.object_list %}
     <h1>{{room.name}}</h1>
     {% endfor %}
+
+    <h5> 
+        {% if page.has_previous %}
+            <a href="?page={{page.previout_page_number}">Previous</a>
+        {% endif %}
+
+        Page {{page.number}} of {{page.paginator.num_pages}}
+
+        {% if page.has_next %}
+            <a href="?page={{page.next_page_number}}">Next</a>
+        {% endif %}
+    </h5>
+
+    <a href = "?page={{page}}">{{page}}</a>
+
 {% endblock content  %}
