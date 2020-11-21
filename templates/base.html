@@ -5,12 +5,19 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>{% block page_name %}{% endblock %} | airbnb</title>
+    <title>{% block page_title %}{% endblock %} | airbnb</title>
 </head>
 
 <body>
-    {% include "partials/header.html" %}
-
+<header>
+{% include "partials/header.html" %}
+</header>
+    {% block search_bar %}
+    <form method="get" action="{% url "rooms:search" %}">
+        <input name="city" placeholder="Search by City">
+    </form>
+    {% endblock search_bar %}
+ 
     {% block content %}
 
     {% endblock content %}
