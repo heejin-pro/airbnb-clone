@@ -11,9 +11,13 @@
 
 
 {% block content %}
+
+{% include 'patials/social_login.html' %}
+
     <form method="post" action="{% url "users:signup" %}">
         {% csrf_token %}
         {{form.as_p}}
         <button>Sign up</button>
     </form>
+    
 {% endblock content %}
