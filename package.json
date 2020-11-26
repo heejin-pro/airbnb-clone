@@ -1,0 +1,25 @@
+{
+  "name": "airbnb-clone",
+  "version": "1.0.0",
+  "description": "파이썬, 장고를 이용해 에어비앤비 서비스 클론 코딩 Cloning Airbnb using Python, Django, ...",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heejin-pro/airbnb-clone.git"
+  },
+  "scripts": {
+    "css": "gulp"
+  },
+  "homepage": "https://github.com/heejin-pro/airbnb-clone#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.0.1"
+  },
+  "dependencies": {}
+}

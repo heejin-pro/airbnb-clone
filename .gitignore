@@ -142,3 +142,6 @@ cython_debug/
 
 # Upload Media
 uploads/
+
+# node module
+node_modules/
