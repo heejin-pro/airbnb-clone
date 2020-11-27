@@ -10,17 +10,17 @@
     <title>{% block page_title %}{% endblock %} | airbnb</title>
 </head>
 
-<body class="text-gray-800">
-    <header class="container max-w-full flex items-center justify-between px-6 h-20 border-b border-gray-400">
+<body class="text-gray-800 mt-24">
+    <header class="container inset-0 max-w-full flex items-center justify-between px-6 h-20 border-b border-gray-400 fixed bg-white">
         <div class="flex">
         <a href="{% url "core:home" %}" class="mr-4">
-            <img class="w-12" src = "{% static 'image/logo.png' %}"/>
+            <img class="w-14" src = "{% static 'image/logo.png' %}"/>
         </a>
         
     
         {% block search_bar %}
-        <form method="get" action="{% url "rooms:search" %}">
-            <input class="border px-2 py-1 rounded-sm" name="city" placeholder="Search by City">
+        <form class="w-/12" method="get" action="{% url "rooms:search" %}">
+            <input class="search-box border px-5 py-3 text-sm font-medium text-gray-900 placeholder-gray-600 rounded-sm w-64 shadow-md hover:shadow-lg focus:outline-none" name="city" placeholder="Search by City">
         </form>
         {% endblock search_bar %}
         </div>
