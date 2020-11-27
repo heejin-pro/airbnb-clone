@@ -10,21 +10,29 @@
     <title>{% block page_title %}{% endblock %} | airbnb</title>
 </head>
 
-<body>
-<header>
-{% include "partials/nav.html" %}
-</header>
-    {% block search_bar %}
-    <form method="get" action="{% url "rooms:search" %}">
-        <input name="city" placeholder="Search by City">
-    </form>
-    {% endblock search_bar %}
- 
-    {% block content %}
+<body class="text-gray-800">
+    <header class="container max-w-full flex items-center justify-between px-6 h-20 border-b border-gray-400">
+        <div class="flex">
+        <a href="{% url "core:home" %}" class="mr-4">
+            <img class="w-12" src = "{% static 'image/logo.png' %}"/>
+        </a>
+        
+    
+        {% block search_bar %}
+        <form method="get" action="{% url "rooms:search" %}">
+            <input class="border px-2 py-1 rounded-sm" name="city" placeholder="Search by City">
+        </form>
+        {% endblock search_bar %}
+        </div>
+        {% include "partials/nav.html" %}
+        
+    </header>
+    
+        {% block content %}
 
-    {% endblock content %}
+        {% endblock content %}
 
-    {% include "partials/footer.html" %}
+        {% include "partials/footer.html" %}
 </body>
 
 </html>
