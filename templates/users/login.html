@@ -14,8 +14,8 @@
         {% include "partials/social_login.html" %}
         <form method="post" action="{% url "users:login" %}" class="w-full">
             {% csrf_token %}
-            <input type="email" placeholder="Email" class="mb-2">
-            <input type="password" placeholder="Password" class="mb-2">
+            {{form.email}}
+            {{form.password}}
             <button class="btn bg-red-400 text-white">LOGIN</button>
         </form>
         <div class="mt-5">
