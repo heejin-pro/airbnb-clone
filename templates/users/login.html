@@ -10,12 +10,18 @@
 
 {% block content %}
 
-<div class="container lg:w-7/12 md:w-1/2 xl:w-1/4 mx-auto my-10 flex flex-col items-center border p-6 border-gray-300">
+    <div class="container lg:w-7/12 md:w-1/2 xl:w-1/4 mx-auto my-10 flex flex-col items-center border p-6 border-gray-300">
         {% include "partials/social_login.html" %}
-        <form method="post" action="{% url "users:login" %}">
+        <form method="post" action="{% url "users:login" %}" class="w-full">
             {% csrf_token %}
-            {{form.as_p}}
-            <button>Login</button>
+            <input type="email" placeholder="Email" class="mb-2">
+            <input type="password" placeholder="Password" class="mb-2">
+            <button class="btn bg-red-400 text-white">LOGIN</button>
         </form>
+        <div class="mt-5">
+            <span class="mr-3">Don't have an Account?</span>
+            <a href="{% url 'users:signup' %}" class="text-red-400 font-medium">SignUp</a>
+        </div>
     </div>
+
 {% endblock content %}
