@@ -39,6 +39,16 @@ class SignUpForm(forms.ModelForm):
         widget=forms.PasswordInput(attrs={"placeholder": "Password Check"})
     )
 
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        try:
+            models.User.objects.get(email=email)
+            raise forms.ValidationError(
+                "That email is already taken", code="existing_user"
+            )
+        except models.User.DoesNotExist:
+            return email
+
     def clean_passsword_chk(self):
         password = self.cleaned_data.get("password")
         password_chk = self.cleaned_data.get("passsword_chk")
