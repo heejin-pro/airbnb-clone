@@ -14,7 +14,7 @@ HOME
         </div>
         <div class="flex flex-wrap -mx-5 mb-10">
             {% for room in rooms %}
-                {% include "partials/room_card.html" with room=room %}
+                {% include "mixins/room_card.html" with room=room %}
             {% endfor %}
         </div>
         <div class="flex items-center container mx-auto justify-center"> 
