@@ -17,18 +17,33 @@
 }
 
 .btn{
-  @apply w-full rounded-sm py-5 font-light mb-2 text-center text-lg border;
+  @apply w-full rounded-sm font-light mb-2 text-center text-lg;
   &.btn--small{
     @apply py-3 rounded-lg;
   }
 }
 
+.btn-link{
+  @apply w-full py-3 rounded-lg font-light text-center text-lg bg-red-400 text-white;
+}
 
-input{
+
+input,
+textarea,
+select{
   @apply rounded-sm text-left border py-5 px-5 border-gray-400 w-full;
   &:focus{
     @apply outline-none;
   }
+}
+
+textarea{
+  resize: none;
+  height: 100px;
+}
+
+select{
+  height: 50px;
 }
 
 form {
