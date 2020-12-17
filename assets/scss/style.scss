@@ -79,7 +79,6 @@ form {
   }
 }
 
-
 .message {
   animation: messageFadeIn 5s ease-in-out forwards;
   &.error {
@@ -96,3 +95,6 @@ form {
   }
 }
 
+.border_section{
+  @apply border border-gray-400 pb-8 mt-8;
+}
