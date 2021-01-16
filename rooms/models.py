@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django_countries.fields import CountryField
 from core import models as core_models
+from cal import Calendar
 
 
 class AbstractItem(core_models.TimeStampedModel):
@@ -119,3 +120,8 @@ class Room(core_models.TimeStampedModel):
 
     def __str__(self):
         return self.name
+
+    def get_calendars(self):
+        this_month = Calendar(2021, 1)
+        next_month = Calendar(2021, 2)
+        return [this_month, next_month]
