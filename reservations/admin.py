@@ -24,3 +24,5 @@ class ReserVationAdmin(admin.ModelAdmin):
 class BookedDayAdmin(admin.ModelAdmin):
 
     """ Booked Day Admin Definition """
+
+    list_display = ("day", "reservation")
