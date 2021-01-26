@@ -150,5 +150,7 @@ EMAIL_FROM = "airbnb-norefly@sandboxd3b9bad2a07444848391089876b48f80.mailgun.org
 
 
 # Auth
-
 LOGIN_URL = "/users/login/"
+
+# Locale
+LOCALE_PATH = (os.path.join(BASE_DIR, "locale"),)
