@@ -20,8 +20,8 @@ msgstr ""
 
 #: templates/base.html:22
 msgid "Search by City"
-msgstr ""
+msgstr "Buscar por Ciudad"
 
 #: templates/partials/footer.html:5
 msgid "Please Don't copy us"
-msgstr ""
+msgstr "Por favor no nos copies"
