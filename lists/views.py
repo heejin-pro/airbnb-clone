@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.views.generic import TemplateView
 from rooms import models as room_models
 from . import models
 
@@ -15,3 +16,7 @@ def toggle_room(request, room_pk):
         elif action == "remove":
             the_list.rooms.remove(room)
     return redirect(reverse("rooms:detail", kwargs={"pk": room_pk}))
+
+
+class SeeFavView(TemplateView):
+    template_name = "lists/list_detail.html"
